@@ -53,7 +53,16 @@ def calculator():
 
 # Print the output
     print(f"Answer: {ans}")
-    
+
+# Ask if the user wants to try again or not.  
 while True:
+    print("\n")
+    try_again = input("Do you want to try again? (yes/no): ")
+    if try_again.lower() != "yes":
+        print("Thank you for using the Simple Calculator App!")
+        break
+    
     calculator()
+    
+
     
