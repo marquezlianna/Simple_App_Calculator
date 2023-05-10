@@ -52,14 +52,14 @@ def calculator():
         ans = "Invalid operation"
 
 # Print the output
-    print(f"Answer: {ans}")
+    print('\033[1;35m'f"Answer: {ans}")
 
 # Ask if the user wants to try again or not.  
 while True:
     print("\n")
-    try_again = input("Do you want to try again? (yes/no): ")
+    try_again = input('\033[1;34m'+ f"Do you want to try again? (yes/no): ")
     if try_again.lower() != "yes":
-        print("Thank you for using the Simple Calculator App!")
+        print('\033[1;95;40m' + f"Thank you for using the Simple Calculator App!")
         break
     
     calculator()
