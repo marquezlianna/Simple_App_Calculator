@@ -10,14 +10,24 @@
     # Use Python Function and appropriate Exceptions to capture errors during runtime.
     
 def calculator():
+    # Add space between every operation
+    print("\n")
     
-# Ask the user to input the first and second number
-    num1 = float(input("Please enter your first number: "))
-    num2 = float(input("Please enter your second number: "))
-# Ask the user to choose an operation
+    # Ask the user to input the first and second number
+    try:
+        num1 = float(input("Please enter your first number: "))
+        num2 = float(input("Please enter your second number: "))
+    # Return if the user input invalid number
+    except ValueError as ERROR:
+        print("Invalid number input\n")
+        print(ERROR)
+        print("\nTry Again!")
+        return
+    
+    # Ask the user to choose an operation
     operation = input("Please enter an operation: +-*/ ")   
      
-# Perform the operation
+    # Perform the operation
     # if addition
     if operation == "+":
         ans = num1 + num2
@@ -29,8 +39,15 @@ def calculator():
         ans = num1 * num2
     # if division
     elif operation == "/":
-        ans = num1/num2
-    
+        # if the user input a zero number
+        try:
+            ans = num1/num2
+        except ZeroDivisionError as ERROR:
+            print("Invalid equation\n")
+            print(ERROR)
+            print("\nTry again!")
+            return
+    # if the user enter an invalid operation
     else:
         ans = "Invalid operation"
 
@@ -39,3 +56,4 @@ def calculator():
     
 while True:
     calculator()
+    
