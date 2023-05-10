@@ -14,3 +14,22 @@ def calculator():
 # Ask the user to input the first and second number
     num1 = float(input("Please enter your first number: "))
     num2 = float(input("Please enter your second number: "))
+# Ask the user to choose an operation
+    operation = input("Please enter an operation: +-*/ ")   
+     
+# Perform the operation
+    # if addition
+    if operation == "+":
+        ans = num1 + num2
+    # if subtraction
+    elif operation == "-":
+        ans = num1 - num2
+    # if multiplication
+    elif operation == "*":
+        ans = num1 * num2
+    # if division
+    elif operation == "/":
+        ans = num1/num2
+    # if the user enter an invalid operation
+    else:
+        ans = "Invalid operation"
