@@ -30,6 +30,12 @@ def calculator():
     # if division
     elif operation == "/":
         ans = num1/num2
-    # if the user enter an invalid operation
+    
     else:
         ans = "Invalid operation"
+
+# Print the output
+    print(f"Answer: {ans}")
+    
+while True:
+    calculator()
